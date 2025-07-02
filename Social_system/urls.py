@@ -24,7 +24,7 @@ import debug_toolbar
 
 
 urlpatterns = [
-    path('__debug__/', include(debug_toolbar.urls)),
+    
     path('admin/', admin.site.urls),
     path('r^tinymce/', include('tinymce.urls')),
     path('social/', include('social.urls')),

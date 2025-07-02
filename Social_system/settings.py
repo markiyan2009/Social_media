@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-tnxyjc%l%bdo!ov66=5!a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', True)
 ALLOWED_HOST = '.onrender.com'
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS','127.0.0.1') ]
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS','127.0.0.1'), os.environ.get('ALLOWED_HOSTS', '127.0.0.2') ]
 import mimetypes
 if DEBUG:
     
@@ -60,13 +60,13 @@ INSTALLED_APPS = [
     'tinymce',
     'cloudinary',
     'cloudinary_storage',
-    'debug_toolbar',
+    'debug_toolbar'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
